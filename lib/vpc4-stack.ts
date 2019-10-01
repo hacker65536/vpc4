@@ -10,5 +10,9 @@ export class Vpc4Stack extends cdk.Stack {
     const vpc = new ec2.Vpc(this,'vpc',{
 	    maxAzs:2,
     });
+
+    new cdk.CfnOutput(this,"id",{
+	    value: "aaa"
+    });
   }
 }
